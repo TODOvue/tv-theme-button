@@ -1,0 +1,59 @@
+{
+  "name": "todovue-theme-button",
+  "private": false,
+  "author": "Cristhian Daza",
+  "description": "Component theme button created for the TodoVue blog",
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TODOvue/todovue-theme-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TODOvue/todovue-theme-button/issues"
+  },
+  "keywords": [
+    "todovue",
+    "front-end",
+    "web",
+    "vue",
+    "vuejs",
+    "vue-js",
+    "vue3",
+    "theme",
+    "dark",
+    "light"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/todovue-theme-button.es.js",
+      "require": "./dist/todovue-theme-button.cjs.js"
+    }
+  },
+  "main": "dist/todovue-theme-button.cjs.js",
+  "module": "dist/todovue-theme-button.es.js",
+  "types": "dist/todovue-theme-button.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.85.0",
+    "vite": "^5.2.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2"
+  }
+}
