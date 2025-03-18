@@ -1,0 +1,61 @@
+@use "global";
+@use "variables";
+
+.tv-theme-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55px;
+  cursor: pointer;
+
+  & .tv-theme {
+    &-switch {
+      position: relative;
+      background: variables.$dark-card-bg;
+      border-radius: 1000px;
+      border: none;
+      display: flex;
+      outline: none;
+
+      &::after {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background: variables.$dark-text;
+        border-radius: 100px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+        content: "";
+        display: block;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+      }
+
+      &.tv-theme-active {
+        background: variables.$light-card-bg;
+        color: variables.$light-text;
+
+        &::after {
+          transform: translateX(90%);
+        }
+      }
+
+      & .tv-theme-icon {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 20px;
+        width: 20px;
+      }
+
+      & span {
+        height: 30px;
+        width: 30px;
+        align-items: center;
+        background: none;
+        display: flex;
+        justify-content: center;
+        line-height: 30px;
+      }
+    }
+  }
+}
