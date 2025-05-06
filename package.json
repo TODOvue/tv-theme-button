@@ -1,17 +1,17 @@
 {
-  "name": "@todovue/tvthemebutton",
+  "name": "@todovue/tv-theme-button",
   "private": false,
   "author": "Cristhian Daza",
-  "description": "Component theme button created for the TodoVue blog",
+  "description": "TvThemeButton is a lightweight and customizable Vue component that allows users to switch between light and dark themes in your application. Designed for modern interfaces, it emits the selected theme and integrates seamlessly into any Vue 3 project.",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TODOvue/todovue-theme-button.git"
+    "url": "https://github.com/TODOvue/tv-theme-button.git"
   },
   "bugs": {
-    "url": "https://github.com/TODOvue/todovue-theme-button/issues"
+    "url": "https://github.com/TODOvue/tv-theme-button/issues"
   },
   "keywords": [
     "todovue",
@@ -27,13 +27,13 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/todovue-theme-button.es.js",
-      "require": "./dist/todovue-theme-button.cjs.js"
+      "import": "./dist/tv-theme-button.es.js",
+      "require": "./dist/tv-theme-button.cjs.js"
     }
   },
-  "main": "dist/todovue-theme-button.cjs.js",
-  "module": "dist/todovue-theme-button.es.js",
-  "types": "dist/todovue-theme-button.d.ts",
+  "main": "dist/tv-theme-button.cjs.js",
+  "module": "dist/tv-theme-button.es.js",
+  "types": "dist/tv-theme-button.d.ts",
   "files": [
     "dist",
     "src",
@@ -48,14 +48,14 @@
     "build:demo": "cp README.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
-    "vue": "^3.4.21"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@todovue/tvdemo": "^1.3.2",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "sass": "^1.85.0",
-    "vite": "^5.2.0",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
-    "vite-plugin-dts": "^4.5.3"
+    "@todovue/tv-demo": "^1.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "sass": "^1.0.0",
+    "vite": "^6.0.0",
+    "vite-plugin-css-injected-by-js": "^3.0.0",
+    "vite-plugin-dts": "^4.0.0"
   }
 }

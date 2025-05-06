@@ -1,13 +1,16 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to `@todovue/tv-theme-button` will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.0.0] - 17/03/2025
+---
+## [1.0.0] - 2025-05-05
 
-### Added
-- Add new version of the project.
+### ✨ Added
 
-[1.0.0]: https://github.com/TODOvue/todovue-theme-button/pull/1/files
+- Initial release of `TvThemeButton`
+- Theme toggle functionality between `light` and `dark` modes
+- `change-theme` event to emit the selected theme
+
+[1.0.0]: https://github.com/TODOvue/tv-theme-button/pull/2/files

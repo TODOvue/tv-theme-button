@@ -2,38 +2,38 @@
 </p>
 
 # TODOvue ThemeButton
-###### TvThemeButton is a custom theme button component for web applications.
+###### vThemeButton is a lightweight and customizable Vue component that allows users to switch between light and dark themes in your application. Designed for modern interfaces, it emits the selected theme and integrates seamlessly into any Vue 3 project.
 
-[![npm](https://img.shields.io/npm/v/@todovue/tvthemebutton.svg)](https://www.npmjs.com/package/@todovue/tvthemebutton) [![Netlify Status](https://api.netlify.com/api/v1/badges/cb4b8651-1062-4a0b-aa47-28437cbf9fdc/deploy-status)](https://app.netlify.com/sites/todovue-theme-button/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tvthemebutton.svg)](https://www.npmjs.com/package/@todovue/tvthemebutton) [![npm](https://img.shields.io/npm/dt/@todovue/tvthemebutton.svg)](https://www.npmjs.com/package/@todovue/tvthemebutton) ![GitHub](https://img.shields.io/github/license/TODOvue/todovue-theme-button) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/todovue-theme-button)
+[![npm](https://img.shields.io/npm/v/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button) [![Netlify Status](https://api.netlify.com/api/v1/badges/cb4b8651-1062-4a0b-aa47-28437cbf9fdc/deploy-status)](https://app.netlify.com/sites/tv-theme-button/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button) [![npm](https://img.shields.io/npm/dt/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button) ![GitHub](https://img.shields.io/github/license/TODOvue/tv-theme-button) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/tv-theme-button)
 
 ## Table of Contents
-- [Demo](https://todovue-theme-button.netlify.app/)
+- [Demo](https://tv-theme-button.netlify.app/)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Events](#events)
 - [Development](#development)
-- [Changelog](https://github.com/TODOvue/todovue-theme-button/blob/main/CHANGELOG.md)
-- [Contributing](https://github.com/TODOvue/todovue-theme-button/blob/main/CONTRIBUTING.md)
-- [License](https://github.com/TODOvue/todovue-theme-button/blob/main/LICENSE)
+- [Changelog](https://github.com/TODOvue/tv-theme-button/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/TODOvue/tv-theme-button/blob/main/CONTRIBUTING.md)
+- [License](https://github.com/TODOvue/tv-theme-button/blob/main/LICENSE)
 
 ## Installation
 Install with npm or yarn
 ```bash
-npm install @todovue/tvthemebutton
+npm install @todovue/tv-theme-button
 ```
 ```bash
-yarn add @todovue/tvthemebutton
+yarn add @todovue/tv-theme-button
 ```
 Import
 ```js
-import TvThemeButton from '@todovue/tvthemebutton'
+import TvThemeButton from '@todovue/tv-theme-button'
 ```
 
 You can also import it directly in the **main.js** file, so you don't have to import it in the pages
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import TvThemeButton from '@todovue/tvthemebutton'
+import TvThemeButton from '@todovue/tv-theme-button'
 
 const app = createApp(App);
 app.component("TvThemeButton", TvThemeButton);
@@ -49,7 +49,7 @@ app.mount("#app");
 </template>
 
 <script setup>
-import TvThemeButton from "@todovue/tvthebutton";
+import TvThemeButton from "@todovue/tv-theme-button";
 
 const changeValue = (value) => {
   console.log(value); // return light or dark
@@ -65,10 +65,10 @@ const changeValue = (value) => {
 ## Development
 Clone the repository and install the dependencies
 ```bash
-git clone https://github.com/TODOvue/todovue-theme-button.git
-cd todovue-theme-button
+git clone https://github.com/TODOvue/tv-theme-button.git
+cd tv-theme-button
 yarn install
 ```
 ---
 ## License
-[MIT](https://github.com/TODOvue/todovue-theme-button/blob/main/LICENSE)
+[MIT](https://github.com/TODOvue/tv-theme-button/blob/main/LICENSE)
