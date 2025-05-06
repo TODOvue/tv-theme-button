@@ -4,7 +4,7 @@
   "author": "Cristhian Daza",
   "description": "TvThemeButton is a lightweight and customizable Vue component that allows users to switch between light and dark themes in your application. Designed for modern interfaces, it emits the selected theme and integrates seamlessly into any Vue 3 project.",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "repository": {
     "type": "git",
