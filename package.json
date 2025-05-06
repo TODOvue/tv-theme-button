@@ -48,14 +48,14 @@
     "build:demo": "cp README.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
-    "vue": "^3.4.21"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@todovue/tvdemo": "^1.3.2",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "sass": "^1.85.0",
-    "vite": "^5.2.0",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
-    "vite-plugin-dts": "^4.5.3"
+    "@todovue/tv-demo": "^1.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "sass": "^1.0.0",
+    "vite": "^6.0.0",
+    "vite-plugin-css-injected-by-js": "^3.0.0",
+    "vite-plugin-dts": "^4.0.0"
   }
 }
