@@ -4,7 +4,7 @@
 </template>
 
 <script setup>
-import TvThemeButton from "@todovue/tvthebutton";
+import TvThemeButton from "@todovue/tv-the-button";
 
 const changeValue = (value) => {
   console.log(value); // return light or dark

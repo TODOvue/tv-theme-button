@@ -22,7 +22,7 @@ export default defineConfig({
       lib: {
         entry: "src/components/TvThemeButton.vue",
         name: "TvThemeButton",
-        fileName: format => `todovue-theme-button.${format}.js`,
+        fileName: format => `tv-theme-button.${format}.js`,
         formats: ["es", "cjs"]
       },
       rollupOptions: {

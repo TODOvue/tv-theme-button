@@ -1,17 +1,17 @@
 {
-  "name": "@todovue/tvthemebutton",
+  "name": "@todovue/tv-theme-button",
   "private": false,
   "author": "Cristhian Daza",
-  "description": "Component theme button created for the TodoVue blog",
+  "description": "TvThemeButton is a lightweight and customizable Vue component that allows users to switch between light and dark themes in your application. Designed for modern interfaces, it emits the selected theme and integrates seamlessly into any Vue 3 project.",
   "license": "MIT",
   "version": "1.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TODOvue/todovue-theme-button.git"
+    "url": "https://github.com/TODOvue/tv-theme-button.git"
   },
   "bugs": {
-    "url": "https://github.com/TODOvue/todovue-theme-button/issues"
+    "url": "https://github.com/TODOvue/tv-theme-button/issues"
   },
   "keywords": [
     "todovue",
@@ -27,13 +27,13 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/todovue-theme-button.es.js",
-      "require": "./dist/todovue-theme-button.cjs.js"
+      "import": "./dist/tv-theme-button.es.js",
+      "require": "./dist/tv-theme-button.cjs.js"
     }
   },
-  "main": "dist/todovue-theme-button.cjs.js",
-  "module": "dist/todovue-theme-button.es.js",
-  "types": "dist/todovue-theme-button.d.ts",
+  "main": "dist/tv-theme-button.cjs.js",
+  "module": "dist/tv-theme-button.es.js",
+  "types": "dist/tv-theme-button.d.ts",
   "files": [
     "dist",
     "src",
