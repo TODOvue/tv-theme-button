@@ -1,5 +1,5 @@
 <script setup>
-import TvDemo from '@todovue/tv-demo';
+import { TvDemo } from '@todovue/tv-demo';
 import { defineAsyncComponent } from 'vue';
 
 const TvThemeButton = defineAsyncComponent(() => import('../components/TvThemeButton.vue'));
@@ -14,6 +14,6 @@ import { demos } from "../utils/mocks.js";
     npm-install="@todovue/tv-theme-button"
     source-link="https://github.com/TODOvue/tv-theme-button"
     url-clone="https://github.com/TODOvue/tv-theme-button.git"
-    version="1.0.0"
+    version="1.0.1"
   />
 </template>
