@@ -2,16 +2,20 @@ import Default from "./demos/default.vue?raw";
 
 const changeValue = (value) => {
   const container = document.querySelector("#tv-theme-button");
+  if (!container) return;
   const firstChild = container.firstElementChild;
-  const secondChild = firstChild.firstElementChild;
-  const theme = localStorage.getItem("theme");
-  const isDark = theme === "dark";
+  const secondChild = firstChild?.firstElementChild;
+  const isDark = localStorage.getItem("theme") === "dark";
 
-  firstChild.classList.toggle("light-mode", isDark);
-  firstChild.classList.toggle("dark-mode", !isDark);
-  secondChild.classList.toggle("light-mode", isDark);
-  secondChild.classList.toggle("dark-mode", !isDark);
-  
+  const applyMode = (el) => {
+    if (!el) return;
+    el.classList.toggle("light-mode", !isDark);
+    el.classList.toggle("dark-mode", isDark);
+  };
+
+  applyMode(firstChild);
+  applyMode(secondChild);
+
   console.log(value);
 };
 
