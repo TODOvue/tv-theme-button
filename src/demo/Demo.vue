@@ -14,6 +14,6 @@ import { demos } from "../utils/mocks.js";
     npm-install="@todovue/tv-theme-button"
     source-link="https://github.com/TODOvue/tv-theme-button"
     url-clone="https://github.com/TODOvue/tv-theme-button.git"
-    version="1.0.1"
+    version="1.0.2"
   />
 </template>

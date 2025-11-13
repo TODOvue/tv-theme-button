@@ -1,13 +1,34 @@
 import { ref, onMounted, watch } from "vue";
 
+const isLocalStorageAvailable = () => {
+  try {
+    return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+  } catch (e) {
+    return false;
+  }
+};
+
+const getStoredTheme = () => {
+  if (isLocalStorageAvailable()) {
+    return localStorage.getItem("theme") || "dark";
+  }
+  return "dark";
+};
+
+const setStoredTheme = (theme) => {
+  if (isLocalStorageAvailable()) {
+    localStorage.setItem("theme", theme);
+  }
+};
+
 const useThemeButton = (emit) => {
   const _icons = import.meta.glob("../assets/icons/*.svg", { eager: true, query: "?raw", import: "default" });
   const iconContent = (icon) => _icons[`../assets/icons/${icon}.svg`] || ""
   
-  const theme = ref(localStorage.getItem("theme") || "dark");
+  const theme = ref(getStoredTheme());
   
   watch(theme, (newTheme) => {
-    localStorage.setItem("theme", newTheme);
+    setStoredTheme(newTheme);
   });
   
   const changeTheme = () => {
@@ -16,7 +37,7 @@ const useThemeButton = (emit) => {
   };
   
   onMounted(() => {
-    theme.value = localStorage.getItem("theme") || "dark";
+    theme.value = getStoredTheme();
   });
   
   return {
