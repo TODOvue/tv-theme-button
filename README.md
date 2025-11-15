@@ -5,11 +5,15 @@
 A lightweight and customizable Vue 3 theme switcher component that allows users to toggle between light and dark modes. Designed for modern interfaces, it persists the theme preference in localStorage and integrates seamlessly into any Vue 3 project or SSR environment (e.g. Nuxt 3).
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cb4b8651-1062-4a0b-aa47-28437cbf9fdc/deploy-status)](https://app.netlify.com/sites/tv-theme-button/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3fb00a24-59fc-4d5c-815f-36fc90f0670c/deploy-status)](https://app.netlify.com/projects/tv-theme-button/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
 [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
 ![License](https://img.shields.io/github/license/TODOvue/tv-theme-button)
-![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/tv-theme-button)
+![Release Date](https://img.shields.io/github/release-date/TODOvue/tv-theme-button)
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/@todovue/tv-theme-button)
+![Node Version](https://img.shields.io/node/v/@todovue/tv-theme-button)
+![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-theme-button)
+![Stars](https://img.shields.io/github/stars/TODOvue/tv-theme-button?style=social)
 
 > Demo: https://tv-theme-button.netlify.app/
 
@@ -61,10 +65,28 @@ pnpm add @todovue/tv-theme-button
 
 ---
 ## Quick Start (SPA)
+### Import Styles
+You must explicitly import the component's stylesheet in your application:
+
+```ts
+// main.ts or main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+
+// Import the component styles
+import '@todovue/tv-theme-button/style.css'
+import { TvThemeButton } from '@todovue/tv-theme-button'
+
+const app = createApp(App)
+app.component('TvThemeButton', TvThemeButton)
+app.mount('#app')
+```
+
 ### Global registration (main.js / main.ts):
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
+import '@todovue/tv-theme-button/style.css'
 import TvThemeButton from '@todovue/tv-theme-button'
 
 createApp(App)
@@ -91,6 +113,17 @@ function handleThemeChange(theme) {
 
 ---
 ## Nuxt 3 / SSR Usage
+### Import Styles in Nuxt Config
+Add the stylesheet to your `nuxt.config.ts`:
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  css: ['@todovue/tv-theme-button/style.css'],
+})
+```
+
+### Component Registration
 Create a plugin file: `plugins/tv-theme-button.client.ts` (client-only is recommended for localStorage access):
 ```ts
 import { defineNuxtPlugin } from '#app'

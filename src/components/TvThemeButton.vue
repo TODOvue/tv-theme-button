@@ -32,4 +32,4 @@ const {
   </div>
 </template>
 
-<style scoped lang="scss" src="../assets/scss/style.scss"></style>
+<style></style>

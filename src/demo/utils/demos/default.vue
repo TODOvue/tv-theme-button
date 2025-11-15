@@ -6,6 +6,7 @@
 
 <script setup>
 import { TvThemeButton } from "@todovue/tv-theme-button";
+import "@todovue/tv-theme-button/style.css";
 
 const changeValue = (value) => {
   console.log(value); // return light or dark
