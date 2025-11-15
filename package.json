@@ -25,11 +25,17 @@
     "dark",
     "light"
   ],
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "dist/*.css"
+  ],
   "exports": {
     ".": {
       "import": "./dist/tv-theme-button.es.js",
       "require": "./dist/tv-theme-button.cjs.js"
-    }
+    },
+    "./style.css": "./dist/tv-theme-button.css"
   },
   "main": "dist/tv-theme-button.cjs.js",
   "module": "dist/tv-theme-button.es.js",
@@ -55,7 +61,6 @@
     "@vitejs/plugin-vue": "^6.0.0",
     "sass": "^1.0.0",
     "vite": "^7.0.0",
-    "vite-plugin-css-injected-by-js": "^3.0.0",
     "vite-plugin-dts": "^4.0.0"
   }
 }
