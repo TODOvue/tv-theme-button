@@ -46,6 +46,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Theme toggle functionality between `light` and `dark` modes
 - `change-theme` event to emit the selected theme
 
+[1.0.3]: https://github.com/TODOvue/tv-theme-button/pull/5/files
 [1.0.2]: https://github.com/TODOvue/tv-theme-button/pull/4/files
 [1.0.1]: https://github.com/TODOvue/tv-theme-button/pull/3/files
 [1.0.0]: https://github.com/TODOvue/tv-theme-button/pull/2/files
