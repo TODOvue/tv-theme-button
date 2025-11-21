@@ -1,15 +1,21 @@
-import TvThemeButton from './components/TvThemeButton.vue'
+import type { App, Plugin } from 'vue'
+import _TvThemeButton from './components/TvThemeButton.vue'
 import './style.scss'
 
-(TvThemeButton as any).install = (app: any) => {
-    app.component('TvThemeButton', TvThemeButton)
+const TvThemeButton = _TvThemeButton as typeof _TvThemeButton & Plugin;
+TvThemeButton.install = (app: App) => {
+  app.component('TvThemeButton', TvThemeButton)
 };
 
-export const TvThemeButtonPlugin = {
-    install(app: any) {
-        app.component('TvThemeButton', TvThemeButton)
-    }
-}
-
 export { TvThemeButton }
-export default TvThemeButton
+
+export const TvThemeButtonPlugin: Plugin = {
+  install: TvThemeButton.install
+};
+export default TvThemeButton;
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    TvThemeButton: typeof TvThemeButton;
+  }
+}

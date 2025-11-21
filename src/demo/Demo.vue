@@ -6,13 +6,13 @@ import { demos } from './utils/mocks.js';
 </script>
 
 <template>
-  <tv-demo
+  <TvDemo
     :component="TvThemeButton"
     :variants="demos"
-    name-component="TvThemeButton"
+    component-name="TvThemeButton"
     npm-install="@todovue/tv-theme-button"
     source-link="https://github.com/TODOvue/tv-theme-button"
     url-clone="https://github.com/TODOvue/tv-theme-button.git"
-    version="1.0.3"
+    version="1.1.0"
   />
 </template>
