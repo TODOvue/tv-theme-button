@@ -1,4 +1,4 @@
-<p align="center"><img width="150" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
+<p align="center"><img width="150" src="https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png" alt="TODOvue logo">
 </p>
 
 # TODOvue ThemeButton (TvThemeButton)
@@ -74,8 +74,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // Import the component styles
-import '@todovue/tv-theme-button/style.css'
 import { TvThemeButton } from '@todovue/tv-theme-button'
+import '@todovue/tv-theme-button/style.css' // Import styles
 
 const app = createApp(App)
 app.component('TvThemeButton', TvThemeButton)
@@ -86,29 +86,12 @@ app.mount('#app')
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import '@todovue/tv-theme-button/style.css'
 import TvThemeButton from '@todovue/tv-theme-button'
+import '@todovue/tv-theme-button/style.css'
 
 createApp(App)
   .use(TvThemeButton) // enables <TvThemeButton /> globally
   .mount('#app')
-```
-
-### Local import inside a component:
-```vue
-<script setup>
-import { TvThemeButton } from '@todovue/tv-theme-button'
-
-function handleThemeChange(theme) {
-  console.log('Theme changed to:', theme) // 'light' or 'dark'
-  // Apply theme to your app (e.g., add class to body)
-  document.documentElement.classList.toggle('dark', theme === 'dark')
-}
-</script>
-
-<template>
-  <TvThemeButton @change-theme="handleThemeChange" />
-</template>
 ```
 
 ---
@@ -119,7 +102,9 @@ Add the stylesheet to your `nuxt.config.ts`:
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  css: ['@todovue/tv-theme-button/style.css'],
+  modules: [
+    '@todovue/tv-theme-button/nuxt'
+  ]
 })
 ```
 
