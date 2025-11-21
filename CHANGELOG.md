@@ -15,8 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Added `CHANGELOG.md` in script to generate demo and documentation site.
 
 ### Dependencies
-- Updated the `@todovue/tv-demo` dependency to `^1.2.0` to ensure compatibility with the latest changes.
-- Updated the `@todovue/tv-button` dependency to `^1.2.2` to ensure compatibility with the latest changes.
+- Updated the `@todovue/tv-button` dependency to `^1.2.1` to ensure compatibility with the latest changes.
 
 ### Fixed
 - Fixed files to export in `package.json` to ensure proper module resolution.
