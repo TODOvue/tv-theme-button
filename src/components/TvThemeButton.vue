@@ -1,12 +1,26 @@
 <script setup>
 import useThemeButton from "../composable/useThemeButton.js"
+
+const props = defineProps({
+  darkIcon: {
+    type: String,
+    default: null,
+    validator: (value) => !value || value.startsWith('http') || value.startsWith('/') || value.startsWith('data:') || value.includes('<svg')
+  },
+  lightIcon: {
+    type: String,
+    default: null,
+    validator: (value) => !value || value.startsWith('http') || value.startsWith('/') || value.startsWith('data:') || value.includes('<svg')
+  }
+});
+
 const emit = defineEmits(["change-theme"]);
 
 const {
   theme,
   changeTheme,
   iconContent,
-} = useThemeButton(emit);
+} = useThemeButton(emit, props);
 </script>
 
 <template>
@@ -17,14 +31,28 @@ const {
       @click="changeTheme"
     >
       <span>
+        <img
+          v-if="iconContent('dark').isUrl"
+          :src="iconContent('dark').content"
+          class="tv-theme-icon"
+          alt="Dark theme icon"
+        />
         <i
-          v-html="iconContent('dark')"
+          v-else
+          v-html="iconContent('dark').content"
           class="tv-theme-icon"
         ></i>
       </span>
       <span>
+        <img
+          v-if="iconContent('light').isUrl"
+          :src="iconContent('light').content"
+          class="tv-theme-icon"
+          alt="Light theme icon"
+        />
         <i
-          v-html="iconContent('light')"
+          v-else
+          v-html="iconContent('light').content"
           class="tv-theme-icon"
         ></i>
       </span>

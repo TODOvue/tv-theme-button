@@ -9,9 +9,15 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 - Added automatic publishing to the TODOvue cPanel in `release.yml` for each release, simplifying package distribution and updates.
 - Added `package-lock.json` to the repository to ensure dependency consistency and facilitate version management across development and production environments.
+- Added `darkIcon` prop to customize the dark mode icon. Accepts URLs (http/https), data URIs, local paths, or inline SVG strings.
+- Added `lightIcon` prop to customize the light mode icon. Accepts URLs (http/https), data URIs, local paths, or inline SVG strings.
+- Added prop validators to ensure icon values are valid URLs or SVG strings.
 
 ### Changed
 - Changed the `base` option in `vite.config.js` for website deployment in cpanel.
+- Modified `useThemeButton` composable to accept `props` parameter for custom icon support.
+- Modified `iconContent()` function to return an object with `content` and `isUrl` properties instead of just a string.
+- Updated component template to conditionally render `<img>` tags for URLs or `<i>` tags with `v-html` for SVG strings.
 
 ### Fixed
 - Fixed repository URL in `package.json` to point to the correct GitHub repository.
