@@ -4,6 +4,22 @@ All notable changes to `@todovue/tv-theme-button` will be documented in this fil
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2025-12-19
+
+### Added
+- Added automatic publishing to the TODOvue cPanel in `release.yml` for each release, simplifying package distribution and updates.
+- Added `package-lock.json` to the repository to ensure dependency consistency and facilitate version management across development and production environments.
+
+### Changed
+- Changed the `base` option in `vite.config.js` for website deployment in cpanel.
+
+### Fixed
+- Fixed repository URL in `package.json` to point to the correct GitHub repository.
+- Fixed the token configuration used to generate the package in the GitHub Actions workflow `release.yml`.
+
+### Dependencies
+- Updated dependency versions in `package.json` to maintain compatibility and benefit from improvements and bug fixes in the used libraries.
+
 ## [1.1.0] - 2025-11-21
 
 ### Added

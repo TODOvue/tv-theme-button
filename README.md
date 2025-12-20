@@ -5,7 +5,6 @@
 A lightweight and customizable Vue 3 theme switcher component that allows users to toggle between light and dark modes. Designed for modern interfaces, it persists the theme preference in localStorage and integrates seamlessly into any Vue 3 project or SSR environment (e.g. Nuxt 3).
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3fb00a24-59fc-4d5c-815f-36fc90f0670c/deploy-status)](https://app.netlify.com/projects/tv-theme-button/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
 [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
 ![License](https://img.shields.io/github/license/TODOvue/tv-theme-button)
@@ -15,7 +14,7 @@ A lightweight and customizable Vue 3 theme switcher component that allows users 
 ![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-theme-button)
 ![Stars](https://img.shields.io/github/stars/TODOvue/tv-theme-button?style=social)
 
-> Demo: https://tv-theme-button.netlify.app/
+> Demo: https://ui.todovue.blog/themebutton
 
 ---
 ## Table of Contents
