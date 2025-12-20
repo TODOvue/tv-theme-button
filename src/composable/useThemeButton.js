@@ -21,9 +21,31 @@ const setStoredTheme = (theme) => {
   }
 };
 
-const useThemeButton = (emit) => {
+const useThemeButton = (emit, props = {}) => {
   const _icons = import.meta.glob("../assets/icons/*.svg", { eager: true, query: "?raw", import: "default" });
-  const iconContent = (icon) => _icons[`../assets/icons/${icon}.svg`] || ""
+  
+  const iconContent = (icon) => {
+    const customIcon = icon === 'dark' ? props.darkIcon : props.lightIcon;
+    
+    if (customIcon) {
+      const isUrl = customIcon.startsWith('http') ||
+                    customIcon.startsWith('/') ||
+                    customIcon.startsWith('data:') ||
+                    customIcon.startsWith('./') ||
+                    customIcon.startsWith('../');
+      
+      return {
+        content: customIcon,
+        isUrl: isUrl && !customIcon.includes('<svg')
+      };
+    }
+
+    const defaultIcon = _icons[`../assets/icons/${icon}.svg`] || "";
+    return {
+      content: defaultIcon,
+      isUrl: false
+    };
+  };
   
   const theme = ref(getStoredTheme());
   

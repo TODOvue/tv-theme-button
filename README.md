@@ -5,7 +5,6 @@
 A lightweight and customizable Vue 3 theme switcher component that allows users to toggle between light and dark modes. Designed for modern interfaces, it persists the theme preference in localStorage and integrates seamlessly into any Vue 3 project or SSR environment (e.g. Nuxt 3).
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3fb00a24-59fc-4d5c-815f-36fc90f0670c/deploy-status)](https://app.netlify.com/projects/tv-theme-button/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
 [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-theme-button.svg)](https://www.npmjs.com/package/@todovue/tv-theme-button)
 ![License](https://img.shields.io/github/license/TODOvue/tv-theme-button)
@@ -15,7 +14,7 @@ A lightweight and customizable Vue 3 theme switcher component that allows users 
 ![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-theme-button)
 ![Stars](https://img.shields.io/github/stars/TODOvue/tv-theme-button?style=social)
 
-> Demo: https://tv-theme-button.netlify.app/
+> Demo: https://ui.todovue.blog/themebutton
 
 ---
 ## Table of Contents
@@ -153,7 +152,55 @@ import { TvThemeButton } from '@todovue/tv-theme-button'
 
 ---
 ## Props
-Currently, TvThemeButton has **no props**. It works out of the box with sensible defaults:
+| Prop Name   | Type     | Default | Description                                                                                             |
+|-------------|----------|---------|---------------------------------------------------------------------------------------------------------|
+| `darkIcon`  | `String` | `null`  | Custom icon for dark mode. Accepts URL (http/https/data:), relative path (/path), or inline SVG string  |
+| `lightIcon` | `String` | `null`  | Custom icon for light mode. Accepts URL (http/https/data:), relative path (/path), or inline SVG string |
+
+### Icon Customization
+You can customize the theme icons in three ways:
+
+#### 1. Using Image URLs
+```vue
+<template>
+  <TvThemeButton 
+    dark-icon="https://example.com/moon-icon.png"
+    light-icon="https://example.com/sun-icon.png"
+    @change-theme="handleTheme"
+  />
+</template>
+```
+
+#### 2. Using Local Assets
+```vue
+<template>
+  <TvThemeButton 
+    dark-icon="/icons/moon.svg"
+    light-icon="/icons/sun.svg"
+    @change-theme="handleTheme"
+  />
+</template>
+```
+
+#### 3. Using Inline SVG
+```vue
+<template>
+  <TvThemeButton 
+    :dark-icon="darkSvg"
+    :light-icon="lightSvg"
+    @change-theme="handleTheme"
+  />
+</template>
+
+<script setup>
+const darkSvg = '<svg viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>'
+const lightSvg = '<svg viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>'
+</script>
+```
+
+> **Note:** If no custom icons are provided, the component uses built-in default icons.
+
+### Default Behavior
 - Initial theme is loaded from localStorage (key: `theme`)
 - Falls back to `'dark'` if no saved preference exists
 - Icons and animations are built-in
@@ -162,7 +209,6 @@ Currently, TvThemeButton has **no props**. It works out of the box with sensible
 Planned props for upcoming versions:
 - `defaultTheme`: Set initial theme ('light' | 'dark')
 - `storageKey`: Customize localStorage key name
-- `customIcons`: Provide your own icon components or SVG strings
 
 ---
 ## Events
