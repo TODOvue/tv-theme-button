@@ -1,4 +1,4 @@
-import { ref, onMounted, watch } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const isLocalStorageAvailable = () => {
   try {
@@ -60,8 +60,20 @@ const useThemeButton = (emit, props = {}) => {
     emit("change-theme", theme.value);
   };
 
+  const handleStorageChange = (event) => {
+    if (event.key === 'theme') {
+      theme.value = event.newValue;
+      emit("change-theme", theme.value);
+    }
+  };
+
   onMounted(() => {
     theme.value = getStoredTheme();
+    window.addEventListener('storage', handleStorageChange);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener('storage', handleStorageChange);
   });
 
   return {

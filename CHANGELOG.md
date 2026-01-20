@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 - Introduced a primary color variable to the global style configuration to facilitate easier branding and theme customization.
 - Improved the theme detection logic to more accurately identify system preferences.
+- Implemented a `storage` event listener to ensure theme changes synchronize instantly across multiple open browser tabs or windows.
 
 ### Dependencies
 - Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
