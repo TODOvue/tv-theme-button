@@ -6,10 +6,16 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- Introduced a primary color variable to the global style configuration to facilitate easier branding and theme customization.
+
 ### Dependencies
 - Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
 - Updated the `sass` dependency to `^1.97.2`.
 - Updated the `vite` dependency to `^7.3.1`.
+
+### Changed
+- Enhanced accessibility across components to improve screen reader compatibility and keyboard navigation.
 
 ## [1.1.1] - 2025-12-19
 

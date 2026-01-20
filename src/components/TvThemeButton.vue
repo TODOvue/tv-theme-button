@@ -29,6 +29,12 @@ const {
       class="tv-theme-switch"
       :class="{ 'tv-theme-active': theme === 'dark' }"
       @click="changeTheme"
+      role="switch"
+      :aria-checked="theme === 'dark'"
+      tabindex="0"
+      aria-label="Toggle dark mode"
+      @keydown.enter.prevent="changeTheme"
+      @keydown.space.prevent="changeTheme"
     >
       <span>
         <img
