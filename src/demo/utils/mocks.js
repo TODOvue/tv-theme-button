@@ -1,7 +1,7 @@
 import Default from "./demos/default.vue?raw";
 import CustomIcons from "./demos/custom-icons.vue?raw";
 import CustomSizes from "./demos/custom-sizes.vue?raw";
-import CustomRounded from "./demos/custom-rounded.vue?raw";
+import CustomSquare from "./demos/custom-square.vue?raw";
 import CustomColors from "./demos/custom-colors.vue?raw";
 
 const changeValue = (value) => {
@@ -73,10 +73,10 @@ export const demos = [
     title: "TvThemeButton Square",
     propsData: {
       onChangeTheme: changeValue,
-      isRounded: false,
+      square: true,
       size: "lg"
     },
     description: 'Change the shape of the button to be square (slightly rounded corners) instead of the default pill shape.',
-    html: CustomRounded,
+    html: CustomSquare,
   },
 ];

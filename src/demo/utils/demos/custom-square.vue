@@ -1,6 +1,6 @@
 <template>
   <TvThemeButton
-    :is-rounded="false"
+    square
     @change-theme="changeTheme"
     size="lg"
   />

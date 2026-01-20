@@ -16,7 +16,6 @@ A lightweight and customizable Vue 3 theme switcher component that allows users 
 
 > Demo: https://ui.todovue.blog/themebutton
 
----
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
@@ -28,13 +27,11 @@ A lightweight and customizable Vue 3 theme switcher component that allows users 
 - [Customization (Styles / Theming)](#customization-styles--theming)
 - [Accessibility](#accessibility)
 - [SSR Notes](#ssr-notes)
-- [Roadmap](#roadmap)
 - [Development](#development)
 - [Changelog](https://github.com/TODOvue/tv-theme-button/blob/main/CHANGELOG.md)
 - [Contributing](https://github.com/TODOvue/tv-theme-button/blob/main/CONTRIBUTING.md)
 - [License](https://github.com/TODOvue/tv-theme-button/blob/main/LICENSE)
 
----
 ## Features
 - **Simple theme toggle**: Switch between light and dark modes with a single click
 - **Persistent state**: Automatically saves theme preference to localStorage (key: `theme`)
@@ -47,7 +44,6 @@ A lightweight and customizable Vue 3 theme switcher component that allows users 
 - **Tree-shake friendly**: Vue marked as external in library build
 - **TypeScript support**: Includes type definitions
 
----
 ## Installation
 Using npm:
 ```bash
@@ -62,7 +58,6 @@ Using pnpm:
 pnpm add @todovue/tv-theme-button
 ```
 
----
 ## Quick Start (SPA)
 ### Import Styles
 You must explicitly import the component's stylesheet in your application:
@@ -93,7 +88,6 @@ createApp(App)
   .mount('#app')
 ```
 
----
 ## Nuxt 3 / SSR Usage
 ### Import Styles in Nuxt Config
 Add the stylesheet to your `nuxt.config.ts`:
@@ -142,7 +136,6 @@ import { TvThemeButton } from '@todovue/tv-theme-button'
 </template>
 ```
 
----
 ## Component Registration Options
 | Approach                                                                     | When to use                                    |
 |------------------------------------------------------------------------------|------------------------------------------------|
@@ -150,7 +143,6 @@ import { TvThemeButton } from '@todovue/tv-theme-button'
 | Local named import `{ TvThemeButton }`                                       | Isolated / code-split contexts                 |
 | Direct default import `import TvThemeButton from '@todovue/tv-theme-button'` | Single usage or manual registration            |
 
----
 ## Props
 | Prop Name     | Type      | Default | Description                                                                                             |
 |---------------|-----------|---------|---------------------------------------------------------------------------------------------------------|
@@ -161,7 +153,7 @@ import { TvThemeButton } from '@todovue/tv-theme-button'
 | `sunColor`    | `String`  | `null`  | Custom color for the sun icon (light mode icon).                                                        |
 | `moonColor`   | `String`  | `null`  | Custom color for the moon icon (dark mode icon).                                                        |
 | `size`        | `String`  | `'md'`  | Size of the button. Options: `'sm'`, `'md'`, `'lg'`.                                                    |
-| `isRounded`   | `Boolean` | `true`  | Whether the button should be fully rounded (pill shape) or have slightly rounded corners.               |
+| `square`      | `Boolean` | `false` | If true, makes the button square instead of rounded.                                                    |
 
 ### Icon Customization
 You can customize the theme icons in three ways:
@@ -211,12 +203,6 @@ const lightSvg = '<svg viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646
 - Falls back to `'dark'` if no saved preference exists
 - Icons and animations are built-in
 
-### Future Props (Roadmap)
-Planned props for upcoming versions:
-- `defaultTheme`: Set initial theme ('light' | 'dark')
-- `storageKey`: Customize localStorage key name
-
----
 ## Events
 | Event name (kebab) | Emits (camel) | Payload Type        | Description                                                   |
 |--------------------|---------------|---------------------|---------------------------------------------------------------|
@@ -248,7 +234,6 @@ const applyTheme = (theme) => {
 </script>
 ```
 
----
 ## Customization (Styles / Theming)
 The component comes with default styles that can be customized using CSS variables or by overriding the scoped styles.
 
@@ -304,7 +289,6 @@ const handleThemeChange = (theme) => {
 </template>
 ```
 
----
 ## Accessibility
 - **Keyboard accessible**: The toggle button can be activated via click (mouse/touch)
 - **Visual feedback**: Clear visual indication of current theme state
@@ -318,7 +302,6 @@ For better accessibility, wrap the component or add context:
 </div>
 ```
 
----
 ## SSR Notes
 - **localStorage safe**: Component uses `onMounted` lifecycle hook to safely access localStorage only on client-side
 - **No hydration issues**: Initial state is set client-side, preventing SSR/CSR mismatches
@@ -337,7 +320,6 @@ onMounted(() => {
 </script>
 ```
 
----
 ## Roadmap
 | Feature                                      | Status      | Version |
 |----------------------------------------------|-------------|---------|
@@ -350,7 +332,6 @@ onMounted(() => {
 | Multiple theme support (not just light/dark) | Considering | 2.0.0   |
 | Expose composable `useThemeButton` publicly  | Considering | 2.0.0   |
 
----
 ## Development
 Clone the repository and install dependencies:
 ```bash
@@ -387,7 +368,6 @@ tv-theme-button/
 └── package.json
 ```
 
----
 ## Contributing
 We welcome contributions! Please see our contributing guidelines:
 - [CONTRIBUTING.md](https://github.com/TODOvue/tv-theme-button/blob/main/CONTRIBUTING.md)
@@ -400,24 +380,13 @@ We welcome contributions! Please see our contributing guidelines:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
----
 ## License
 MIT © TODOvue
 
 See [LICENSE](https://github.com/TODOvue/tv-theme-button/blob/main/LICENSE) for more information.
 
----
 ## Changelog
 See [CHANGELOG.md](https://github.com/TODOvue/tv-theme-button/blob/main/CHANGELOG.md) for version history and release notes.
 
----
 ### Attributions
 Crafted with ❤️ for the TODOvue component ecosystem
-
-**Author**: Cristhian Daza
-
-**Links**:
-- [NPM Package](https://www.npmjs.com/package/@todovue/tv-theme-button)
-- [GitHub Repository](https://github.com/TODOvue/tv-theme-button)
-- [Live Demo](https://tv-theme-button.netlify.app/)
-- [Report Issues](https://github.com/TODOvue/tv-theme-button/issues)

@@ -34,9 +34,9 @@ const props = defineProps({
     default: "md",
     validator: (value) => ["sm", "md", "lg"].includes(value),
   },
-  isRounded: {
+  square: {
     type: Boolean,
-    default: true,
+    default: false,
   },
 });
 
@@ -61,7 +61,7 @@ const styleObject = computed(() => {
 <template>
   <div
     class="tv-theme-button"
-    :class="[`tv-theme-button--${size}`, { 'tv-theme-button--rounded': isRounded }]"
+    :class="[`tv-theme-button--${size}`, { 'tv-theme-button--rounded': !square }]"
     :style="styleObject"
   >
     <div
