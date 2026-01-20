@@ -4,6 +4,28 @@ All notable changes to `@todovue/tv-theme-button` will be documented in this fil
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] - 2026-01-20
+
+### Added
+- Introduced a primary color variable to the global style configuration to facilitate easier branding and theme customization.
+- Improved the theme detection logic to more accurately identify system preferences.
+- Implemented a `storage` event listener to ensure theme changes synchronize instantly across multiple open browser tabs or windows.
+- Introduced support for custom colors to allow for more flexible branding and component styling.
+- Added configurable size options `sm` and `lg` to provide greater control over component dimensions.
+- Implemented `rounded` properties to support various border-radius styles across components.
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
+- Updated the `sass` dependency to `^1.97.2`.
+- Updated the `vite` dependency to `^7.3.1`.
+
+### Changed
+- Enhanced accessibility across components to improve screen reader compatibility and keyboard navigation.
+- Updated the application default to light mode when no specific theme preference is found.
+
+### Performance
+- Improved transition effects and transform properties to ensure smoother animations and better rendering performance.
+
 ## [1.1.1] - 2025-12-19
 
 ### Added
@@ -84,6 +106,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Theme toggle functionality between `light` and `dark` modes
 - `change-theme` event to emit the selected theme
 
+[1.2.0]: https://github.com/TODOvue/tv-theme-button/pull/8/files
+[1.1.1]: https://github.com/TODOvue/tv-theme-button/pull/7/files
 [1.1.0]: https://github.com/TODOvue/tv-theme-button/pull/6/files
 [1.0.3]: https://github.com/TODOvue/tv-theme-button/pull/5/files
 [1.0.2]: https://github.com/TODOvue/tv-theme-button/pull/4/files

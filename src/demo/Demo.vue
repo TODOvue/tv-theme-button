@@ -9,10 +9,11 @@ import { demos } from './utils/mocks.js';
   <TvDemo
     :component="TvThemeButton"
     :variants="demos"
+    :manual-emits="['change-theme']"
     component-name="TvThemeButton"
     npm-install="@todovue/tv-theme-button"
     source-link="https://github.com/TODOvue/tv-theme-button"
     url-clone="https://github.com/TODOvue/tv-theme-button.git"
-    version="1.1.1"
+    version="1.2.0"
   />
 </template>
