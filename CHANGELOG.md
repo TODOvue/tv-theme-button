@@ -23,6 +23,9 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Enhanced accessibility across components to improve screen reader compatibility and keyboard navigation.
 - Updated the application default to light mode when no specific theme preference is found.
 
+### Performance
+- Improved transition effects and transform properties to ensure smoother animations and better rendering performance.
+
 ## [1.1.1] - 2025-12-19
 
 ### Added
