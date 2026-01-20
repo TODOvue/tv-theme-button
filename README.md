@@ -152,10 +152,16 @@ import { TvThemeButton } from '@todovue/tv-theme-button'
 
 ---
 ## Props
-| Prop Name   | Type     | Default | Description                                                                                             |
-|-------------|----------|---------|---------------------------------------------------------------------------------------------------------|
-| `darkIcon`  | `String` | `null`  | Custom icon for dark mode. Accepts URL (http/https/data:), relative path (/path), or inline SVG string  |
-| `lightIcon` | `String` | `null`  | Custom icon for light mode. Accepts URL (http/https/data:), relative path (/path), or inline SVG string |
+| Prop Name     | Type      | Default | Description                                                                                             |
+|---------------|-----------|---------|---------------------------------------------------------------------------------------------------------|
+| `darkIcon`    | `String`  | `null`  | Custom icon for dark mode. Accepts URL (http/https/data:), relative path (/path), or inline SVG string  |
+| `lightIcon`   | `String`  | `null`  | Custom icon for light mode. Accepts URL (http/https/data:), relative path (/path), or inline SVG string |
+| `buttonColor` | `String`  | `null`  | Custom background color for the switch button. Overrides the default theme background.                  |
+| `knobColor`   | `String`  | `null`  | Custom color for the sliding knob.                                                                      |
+| `sunColor`    | `String`  | `null`  | Custom color for the sun icon (light mode icon).                                                        |
+| `moonColor`   | `String`  | `null`  | Custom color for the moon icon (dark mode icon).                                                        |
+| `size`        | `String`  | `'md'`  | Size of the button. Options: `'sm'`, `'md'`, `'lg'`.                                                    |
+| `isRounded`   | `Boolean` | `true`  | Whether the button should be fully rounded (pill shape) or have slightly rounded corners.               |
 
 ### Icon Customization
 You can customize the theme icons in three ways:

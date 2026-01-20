@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Introduced a primary color variable to the global style configuration to facilitate easier branding and theme customization.
 - Improved the theme detection logic to more accurately identify system preferences.
 - Implemented a `storage` event listener to ensure theme changes synchronize instantly across multiple open browser tabs or windows.
+- Introduced support for custom colors to allow for more flexible branding and component styling.
+- Added configurable size options `sm` and `lg` to provide greater control over component dimensions.
+- Implemented `rounded` properties to support various border-radius styles across components.
 
 ### Dependencies
 - Updated the `@todovue/tv-demo` dependency to `^1.4.4`.

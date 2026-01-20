@@ -1,5 +1,8 @@
 import Default from "./demos/default.vue?raw";
 import CustomIcons from "./demos/custom-icons.vue?raw";
+import CustomSizes from "./demos/custom-sizes.vue?raw";
+import CustomRounded from "./demos/custom-rounded.vue?raw";
+import CustomColors from "./demos/custom-colors.vue?raw";
 
 const changeValue = (value) => {
   const container = document.querySelector("#tv-theme-button");
@@ -12,6 +15,9 @@ const changeValue = (value) => {
     if (!el) return;
     el.classList.toggle("light-mode", !isDark);
     el.classList.toggle("dark-mode", isDark);
+    if (!isDark && el.closest('.tv-theme-button')) {
+      el.style.backgroundColor = "#f39c12"; // Example light mode color
+    }
   };
 
   applyMode(firstChild);
@@ -38,5 +44,39 @@ export const demos = [
     },
     description: 'Customize the theme button with your own icons. You can use URLs, local assets, or inline SVG to personalize the appearance.',
     html: CustomIcons,
+  },
+  {
+    id: 3,
+    title: "TvThemeButton Sizes",
+    propsData: {
+      onChangeTheme: changeValue,
+      size: "lg"
+    },
+    description: 'The component supports different sizes: sm, md (default), and lg. This example shows the large size.',
+    html: CustomSizes,
+  },
+  {
+    id: 4,
+    title: "TvThemeButton Custom Colors",
+    propsData: {
+      onChangeTheme: changeValue,
+      buttonColor: "#6F4E37",
+      knobColor: "#C0C0C0",
+      sunColor: "#FFD700",
+      moonColor: "#E0FFFF"
+    },
+    description: 'Fully customize the colors of the button, knob, and icons to match your brand identity.',
+    html: CustomColors,
+  },
+  {
+    id: 5,
+    title: "TvThemeButton Square",
+    propsData: {
+      onChangeTheme: changeValue,
+      isRounded: false,
+      size: "lg"
+    },
+    description: 'Change the shape of the button to be square (slightly rounded corners) instead of the default pill shape.',
+    html: CustomRounded,
   },
 ];

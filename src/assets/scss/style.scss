@@ -2,20 +2,63 @@
 @use "variables";
 
 .tv-theme-button {
+  --tv-button-width: 55px;
+  --tv-switch-height: 30px;
+  --tv-switch-width: 30px;
+  --tv-icon-size: 20px;
+  --tv-switch-bg: #{variables.$dark-card-bg};
+  --tv-switch-active-bg: #{variables.$light-card-bg};
+  --tv-knob-color: #{variables.$dark-text};
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 55px;
+  width: var(--tv-button-width);
   cursor: pointer;
+
+  &--sm {
+    --tv-button-width: 40px;
+    --tv-switch-height: 22px;
+    --tv-switch-width: 22px;
+    --tv-icon-size: 14px;
+  }
+
+  &--lg {
+    --tv-button-width: 70px;
+    --tv-switch-height: 38px;
+    --tv-switch-width: 38px;
+    --tv-icon-size: 26px;
+  }
+
+  &--rounded {
+    .tv-theme-switch {
+      border-radius: 1000px;
+
+      &::after {
+        border-radius: 100px;
+      }
+    }
+  }
+
+  &:not(.tv-theme-button--rounded) {
+    .tv-theme-switch {
+      border-radius: 5px;
+
+      &::after {
+        border-radius: 3px;
+      }
+    }
+  }
 
   & .tv-theme {
     &-switch {
       position: relative;
-      background: variables.$dark-card-bg;
-      border-radius: 1000px;
+      background: var(--tv-button-bg, var(--tv-switch-bg));
       border: none;
       display: flex;
       outline: none;
+      transition: background 0.3s ease;
+      height: var(--tv-switch-height);
 
       &:focus-visible {
         outline: 2px solid variables.$primary;
@@ -24,23 +67,24 @@
 
       &::after {
         position: absolute;
-        height: 30px;
-        width: 30px;
-        background: variables.$dark-text;
-        border-radius: 100px;
+        left: 0;
+        top: 0;
+        height: var(--tv-switch-height);
+        width: var(--tv-switch-width);
+        background: var(--tv-knob-color);
         box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
         content: "";
         display: block;
         transform: translateX(0);
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease-in-out;
       }
 
       &.tv-theme-active {
-        background: variables.$light-card-bg;
+        background: var(--tv-button-bg, var(--tv-switch-active-bg));
         color: variables.$light-text;
 
         &::after {
-          transform: translateX(90%);
+          transform: translateX(calc(var(--tv-button-width) - var(--tv-switch-width)));
         }
       }
 
@@ -48,19 +92,31 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 20px;
-        width: 20px;
+        height: var(--tv-icon-size);
+        width: var(--tv-icon-size);
+
+        &.moon-icon {
+          color: var(--tv-moon-icon-color, inherit);
+        }
+
+        &.sun-icon {
+          color: var(--tv-sun-icon-color, inherit);
+        }
       }
 
       & span {
-        height: 30px;
-        width: 30px;
+        height: var(--tv-switch-height);
+        width: var(--tv-switch-width);
         align-items: center;
         background: none;
         display: flex;
         justify-content: center;
-        line-height: 30px;
+        line-height: var(--tv-switch-height);
+        flex-shrink: 0;
       }
+
+      justify-content: space-between;
+      width: 100%;
     }
   }
 }
