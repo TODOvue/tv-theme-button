@@ -4,7 +4,7 @@ All notable changes to `@todovue/tv-theme-button` will be documented in this fil
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.2.0] - 2026-01-20
 
 ### Added
 - Introduced a primary color variable to the global style configuration to facilitate easier branding and theme customization.
@@ -106,6 +106,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Theme toggle functionality between `light` and `dark` modes
 - `change-theme` event to emit the selected theme
 
+[1.2.0]: https://github.com/TODOvue/tv-theme-button/pull/8/files
+[1.1.1]: https://github.com/TODOvue/tv-theme-button/pull/7/files
 [1.1.0]: https://github.com/TODOvue/tv-theme-button/pull/6/files
 [1.0.3]: https://github.com/TODOvue/tv-theme-button/pull/5/files
 [1.0.2]: https://github.com/TODOvue/tv-theme-button/pull/4/files
