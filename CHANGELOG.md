@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 - Introduced a primary color variable to the global style configuration to facilitate easier branding and theme customization.
+- Improved the theme detection logic to more accurately identify system preferences.
 
 ### Dependencies
 - Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
@@ -16,6 +17,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 - Enhanced accessibility across components to improve screen reader compatibility and keyboard navigation.
+- Updated the application default to light mode when no specific theme preference is found.
 
 ## [1.1.1] - 2025-12-19
 
