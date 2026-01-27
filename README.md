@@ -20,7 +20,7 @@ A lightweight and customizable Vue 3 theme switcher component that allows users 
 - [Features](#features)
 - [Installation](#installation)
 - [Quick Start (SPA)](#quick-start-spa)
-- [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage)
+- [Nuxt 4 / SSR Usage](#nuxt-4--ssr-usage)
 - [Component Registration Options](#component-registration-options)
 - [Props](#props)
 - [Events](#events)
@@ -88,7 +88,7 @@ createApp(App)
   .mount('#app')
 ```
 
-## Nuxt 3 / SSR Usage
+## Nuxt 4 / SSR Usage
 ### Import Styles in Nuxt Config
 Add the stylesheet to your `nuxt.config.ts`:
 
